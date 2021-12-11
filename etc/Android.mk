@@ -27,7 +27,6 @@ ifneq ($(TW_EXCLUDE_DEFAULT_USB_INIT), true)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := init.recovery.usb.rc
-LOCAL_MODULE_TAGS := eng
 LOCAL_MODULE_CLASS := RECOVERY_EXECUTABLES
 
 # Cannot send to TARGET_RECOVERY_ROOT_OUT since build system wipes init*.rc
@@ -43,7 +42,6 @@ endif
 ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 22; echo $$?),0)
     include $(CLEAR_VARS)
     LOCAL_MODULE := init.recovery.service.rc
-    LOCAL_MODULE_TAGS := eng
     LOCAL_MODULE_CLASS := RECOVERY_EXECUTABLES
     LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)
 
@@ -52,7 +50,6 @@ ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 22; echo $$?),0)
 else
     include $(CLEAR_VARS)
     LOCAL_MODULE := init.recovery.service.rc
-    LOCAL_MODULE_TAGS := eng
     LOCAL_MODULE_CLASS := RECOVERY_EXECUTABLES
     LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)
 
@@ -63,7 +60,6 @@ endif
 ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 26; echo $$?),0)
     include $(CLEAR_VARS)
     LOCAL_MODULE := init.recovery.hlthchrg.rc
-    LOCAL_MODULE_TAGS := eng
     LOCAL_MODULE_CLASS := RECOVERY_EXECUTABLES
     LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)
 
@@ -72,7 +68,6 @@ ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 26; echo $$?),0)
 
     include $(CLEAR_VARS)
     LOCAL_MODULE := init.recovery.ldconfig.rc
-    LOCAL_MODULE_TAGS := eng
     LOCAL_MODULE_CLASS := RECOVERY_EXECUTABLES
     LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)
 
@@ -81,7 +76,6 @@ ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 26; echo $$?),0)
 else
     include $(CLEAR_VARS)
     LOCAL_MODULE := init.recovery.hlthchrg.rc
-    LOCAL_MODULE_TAGS := eng
     LOCAL_MODULE_CLASS := RECOVERY_EXECUTABLES
     LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)
 
@@ -93,7 +87,6 @@ ifeq ($(TWRP_INCLUDE_LOGCAT), true)
     ifeq ($(TARGET_USES_LOGD), true)
         include $(CLEAR_VARS)
         LOCAL_MODULE := init.recovery.logd.rc
-        LOCAL_MODULE_TAGS := eng
         LOCAL_MODULE_CLASS := RECOVERY_EXECUTABLES
 
         # Cannot send to TARGET_RECOVERY_ROOT_OUT since build system wipes init*.rc
@@ -109,7 +102,6 @@ endif
 ifeq ($(TW_USE_TOOLBOX), true)
     include $(CLEAR_VARS)
     LOCAL_MODULE := init.recovery.mksh.rc
-    LOCAL_MODULE_TAGS := eng
     LOCAL_MODULE_CLASS := RECOVERY_EXECUTABLES
 
     # Cannot send to TARGET_RECOVERY_ROOT_OUT since build system wipes init*.rc
