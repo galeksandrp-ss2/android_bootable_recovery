@@ -14,16 +14,10 @@
 // limitations under the License.
 //
 
-cc_library_static {
+cc_library {
     name: "libbootloader_message",
-    srcs: ["bootloader_message.cpp"],
-    cflags: [
-        "-Wall",
-        "-Werror",
+    defaults: [
+        "libbootloader_message_defaults",
     ],
-    static_libs: [
-        "libbase",
-        "libfs_mgr",
-    ],
-    export_include_dirs: ["include"],
+    recovery_available: true,
 }
