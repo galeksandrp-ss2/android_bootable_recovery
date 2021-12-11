@@ -72,11 +72,11 @@ cc_library_static {
 
     // Should avoid exposing to the libs that might be used in device-specific codes (e.g.
     // libedify, libotautil, librecovery_ui).
-    visibility: [
-        "//bootable/recovery",
-        "//bootable/recovery/install",
-        "//bootable/recovery/libaosprecovery",
-        "//bootable/recovery/minadbd",
-        "//bootable/recovery/tests",
-    ],
+//    visibility: [
+//        "//bootable/recovery",
+//        "//bootable/recovery/install",
+//        "//bootable/recovery/libaosprecovery",
+//        "//bootable/recovery/minadbd",
+//        "//bootable/recovery/tests",
+//    ],
 }
